@@ -19,15 +19,11 @@ export class QuoteComponent implements OnInit {
   }
 
   updateVote(vote, index) {
-    if(this.quotes[index].upvotes > 0) {
       if(vote > 0) {
         this.quotes[index].upvotes += vote;
       }else {
         this.quotes[index].downvotes -= vote;
       }
-    } else {
-      this.quotes[index].upvotes = 0;
-    }
   }
 
   deleteQuote(remove,index){
