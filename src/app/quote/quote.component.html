@@ -1,8 +1,18 @@
-<ul>
-    <div *ngFor="let quote of quotes;let i = index">
-        <li appHighestUpvotes> {{quote.name}} </li>
-        <button (click)="toggleDetails(i)">Show quote details</button>
-        <app-quote-detail *ngIf="quote.showDescription" [quote]="quote"
-            (isVoted) = "updateVote($event, i)" (isDelete)="deleteQuote($event,i)"></app-quote-detail>
-    </div>
-</ul>
+<div class="container">
+ <div class="row">
+     <div class="col-md-6">
+         <div *ngFor="let quote of quotes;let i = index">
+             <div>
+                <h6 id={{i}} appHighestUpvotes>{{quote.name}} - {{quote.author}}</h6>
+                <button (click)='toggleDetails(i)' class="btn btn-primary">Show quote details</button>
+             </div>
+             <div *ngIf='quote.showDescription'>
+                <app-quote-detail  [quote]="quote" (isVoted)="updateVote($event, i)" (isDelete)="deleteQuote($event,i)"></app-quote-detail>
+             </div>
+         </div>
+     </div>
+     <div class="col-md-6">
+         <app-quote-form></app-quote-form>
+     </div>
+ </div>
+</div>
