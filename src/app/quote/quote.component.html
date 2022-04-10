@@ -2,6 +2,7 @@
     <div *ngFor="let quote of quotes;let i = index">
         <li appHighestUpvotes> {{quote.name}} </li>
         <button (click)="toggleDetails(i)">Show quote details</button>
-        <app-quote-detail *ngIf="quote.showDescription" [quote]="quote" (isVoted) = "updateVote($event, i)"></app-quote-detail>
+        <app-quote-detail *ngIf="quote.showDescription" [quote]="quote"
+            (isVoted) = "updateVote($event, i)" (isDelete)="deleteQuote($event,i)"></app-quote-detail>
     </div>
 </ul>
