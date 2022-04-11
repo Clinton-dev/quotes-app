@@ -1,5 +1,5 @@
 <p class="pb-3 mb-0 small lh-sm ">posted by <strong class=" text-gray-dark">@ {{quote.user}}</strong> with {{quote.upvotes}} upvotes and {{quote.downvotes}} downvotes</p>
 
-<button (click)="changeVote(1)">upvote</button>
-<button (click)="changeVote(-1)">downvote</button>
-<button (click)="quoteDelete(true)">Delete quote</button>
+<button (click)="changeVote(1)" class="btn"><i class="fa-solid fa-thumbs-up"></i> Upvote</button>
+<button (click)="changeVote(-1)" class="btn"><i class="fa-solid fa-thumbs-down"></i> Downvote</button>
+<button (click)="quoteDelete(true)" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i> Delete quote</button>
