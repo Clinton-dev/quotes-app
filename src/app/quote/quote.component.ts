@@ -8,10 +8,10 @@ import { Quote } from "../quote";
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] = [
-    new Quote(1, "Ashes fly back into the face of him who throws them.", "A wise african man", "user-01", 3, 1),
-    new Quote(2,"Do not follow a person who is running away.", "A wise african man", "user-02", 1, 0),
-    new Quote(3,"He who is being carried does not realize how far the town is.", "A wise Chinese man", "user-03", 5, 1),
-    new Quote(4,"A flea can trouble a lion more than a lion can trouble a flea.", "A wise african man", "user-02", 0, 7)
+    new Quote(1, "Ashes fly back into the face of him who throws them.", "A wise african man", "user-01", 3, 1, new Date('April 11, 2022 03:54:00')),
+    new Quote(2,"Do not follow a person who is running away.", "A wise african man", "user-02", 1, 0, new Date('February 1, 2022 06:42:00')),
+    new Quote(3,"He who is being carried does not realize how far the town is.", "A wise Chinese man", "user-03", 5, 1, new Date('January 3, 2022 10:26:00')),
+    new Quote(4,"A flea can trouble a lion more than a lion can trouble a flea.", "A wise african man", "user-02", 0, 7, new Date('April 10, 2022 13:34:00'))
   ];
 
   toggleDetails(index) {
