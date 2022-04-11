@@ -1,2 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+    background-color: rgb(26, 26, 64);
+    color: rgb(217, 221, 231);
+}
+
+.form-display {
+    background-color: rgb(39, 0, 130);
+}
+
+.btn-show-details {
+    background-color: rgb(250, 88, 182);
+    color: rgb(217, 221, 231);
+}
